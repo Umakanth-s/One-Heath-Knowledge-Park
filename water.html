@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Water - One Health Knowledge Park</title>
+    <style>
+        /* Container for background image with transparency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('waterbg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ddd;
+        }
+
+        /* Container with dark transparent background */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #00bcd4; /* Aqua blue color */
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background-color: #00bcd4;
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Equal columns for text and images */
+            gap: 40px;
+            align-items: start;
+        }
+
+        .text-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #eee;
+        }
+
+        /* Smart text with glowing effect */
+        .smart-text {
+            font-size: 1.1rem;
+            background-color: rgba(0, 188, 212, 0.2); /* Transparent aqua glow */
+            padding: 20px;
+            border-left: 5px solid #00bcd4;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column; /* Stack images vertically */
+            gap: 20px;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-height: 300px; /* Adjusted height for better visibility */
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .plot-caption {
+            margin-top: 10px;
+            font-size: 1.2rem; /* Increased font size for better visibility */
+            color: #bbb;
+        }
+
+        /* Animate on scroll */
+        .text-content, .image-container {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back button with glowing effect */
+        .navigation {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-btn {
+            padding: 12px 25px;
+            background-color: #00bcd4;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #26c6da;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 188, 212, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr; /* Stack columns on smaller screens */
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .image-container {
+                flex-direction: column; /* Stack images on smaller screens */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Water Resources and Rainfall</h1>
+
+        <div class="content-wrapper">
+            <!-- Text Content Section -->
+            <div class="text-content" id="text-section">
+                <p>
+                    Based on the rainfall data from 2004 to 2024, Bettahalasuru village has seen significant impacts on agriculture and water resources.
+                </p>
+                <p class="smart-text">
+                    In low rainfall years like 2014 and 2023, water scarcity affected crops such as ragi and groundnuts, leading farmers to shift to drought-resistant crops. High rainfall years like 2018, however, boosted yields but also caused flooding in fields and quarries.
+                </p>
+                <p>
+                    Quarrying has also contributed to groundwater depletion, and heavy rainfall occasionally led to quarries flooding, impacting both extraction and groundwater recharge. Rainwater harvesting remains essential to manage these fluctuations.
+                </p>
+                <p class="smart-text">
+                    <strong>Water Sources:</strong> Bettahalasuru relies on a mix of surface and groundwater sources. Key water sources include:
+                    <ul>
+                        <li><strong>Open Wells:</strong> These are traditional sources providing water for domestic use, especially during dry spells.</li>
+                        <li><strong>Quarries:</strong> While they are significant for water extraction, their overuse has led to depletion and flooding issues during heavy rains.</li>
+                        <li><strong>Rainwater Harvesting Systems:</strong> Initiatives are underway to capture and store rainwater, which is crucial for replenishing groundwater levels and providing a backup during dry periods.</li>
+                    </ul>
+                </p>
+                <h2>Lake Maintenance Activities</h2>
+<table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid #444; padding: 10px; text-align: left;">Activity</th>
+            <th style="border: 1px solid #444; padding: 10px; text-align: left;">Date</th>
+            <th style="border: 1px solid #444; padding: 10px; text-align: left;">Outcome/Impact</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border: 1px solid #444; padding: 10px;">Weekly watering of saplings</td>
+            <td style="border: 1px solid #444; padding: 10px;">Oct-Dec</td>
+            <td style="border: 1px solid #444; padding: 10px;">Tree saplings and Vetiver grass are watered regularly. Saplings are thriving, adding to biodiversity. Vetiver grass is growing, strengthening the lake bund.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #444; padding: 10px;">Regular removal of invasive plant species</td>
+            <td style="border: 1px solid #444; padding: 10px;">Oct-Dec</td>
+            <td style="border: 1px solid #444; padding: 10px;">Parthenium plants were removed from areas near the Vetiver saplings, helping the Vetiver saplings thrive.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #444; padding: 10px;">Regular pick up of waste from lake community bins</td>
+            <td style="border: 1px solid #444; padding: 10px;">Oct-Dec</td>
+            <td style="border: 1px solid #444; padding: 10px;">Continued effort of litter removal will maintain visual cleanliness and prevent the lake from being polluted with solid waste.</td>
+        </tr>
+    </tbody>
+</table>
+
+            </div>
+            
+
+            <!-- Image Container -->
+            <div class="image-container" id="image-section">
+                <img src="raingraph.png" alt="Rainfall Data in Bettahalasuru">
+                <p class="plot-caption">Figure: Rainfall in Bettahalasuru from 2004 to 2024</p>
+                <img src="lake.jpg" alt="Rainwater Harvesting System">
+                <p class="plot-caption">Figure: Bettahalasuru Lake - Fresh water source</p>
+                <img src="lakemaintain.png" alt="Lake Maintenance Efforts">
+                <p class="plot-caption">Figure: Efforts for Maintaining Bettahalasuru Lake</p>
+            </div>
+        </div>
+
+        <!-- Back to Home Navigation -->
+        <div class="navigation">
+            <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Scroll-triggered animation for sections
+        const textSection = document.getElementById('text-section');
+        const imageSection = document.getElementById('image-section');
+
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            if (scrollPosition > textSection.offsetTop + 100) {
+                textSection.classList.add('active');
+            }
+
+            if (scrollPosition > imageSection.offsetTop + 100) {
+                imageSection.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>

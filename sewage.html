@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sewage and Waste Management - Bettahalasuru</title>
+    <style>
+        /* Container for background image with transparency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('dogss.jpg') no-repeat center center fixed;
+            background-size: cover; /* Cover the full screen */
+            color: #ddd; /* Light text for dark background */
+        }
+
+        /* Container with dark transparent background */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Softer shadow */
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ffca28; /* Starry gold color */
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background-color: #ffca28;
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .section-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px; /* Add space between sections */
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .text-content {
+            flex: 1;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #eee;
+            padding-right: 20px; /* Space between text and image */
+        }
+
+        .plot-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .plot-container img {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2); /* Soft white shadow */
+            transition: transform 0.3s ease;
+        }
+
+        .plot-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .plot-caption {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-btn {
+            padding: 12px 25px;
+            background-color: #ffca28;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #ffb74d;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(255, 202, 40, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .text-content {
+                padding-right: 0; /* Remove padding for mobile view */
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sewage and Waste Management in Bettahalasuru</h1>
+
+        <!-- Sewage Management Section -->
+        <div class="section-wrapper">
+            <h2>Sewage Management</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>
+                        Bettahalasuru's sewage management issues stem from inadequate infrastructure and increasing population density. The lack of proper sewage treatment facilities has led to untreated waste being discharged into local water bodies, contributing to severe environmental degradation. The local government is currently working to address these issues through several initiatives.
+                    </p>
+                    <p>
+                        <strong>Objectives:</strong>
+                        <ul>
+                            <li>Establish a reliable sewage treatment facility.</li>
+                            <li>Reduce the discharge of untreated sewage into the environment.</li>
+                            <li>Increase community awareness regarding proper sewage disposal.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Implementation:</strong>
+                        The local government is collaborating with NGOs to develop a sewage treatment plant (STP) aimed at processing the sewage generated from the panchayat. Awareness campaigns are being launched to educate residents on the importance of proper sewage disposal and the functioning of the new STP.
+                    </p>
+                    <p>
+                        <strong>Harmful Effects:</strong>
+                        Contaminated water sources pose serious health risks, including waterborne diseases such as cholera and dysentery. Additionally, untreated sewage contaminates local water bodies, affecting aquatic life and degrading ecosystems.
+                    </p>
+                    <p>
+                        <strong>Conclusion:</strong>
+                        Improving sewage management in Bettahalasuru is crucial for safeguarding public health and the environment. Community involvement and investment in infrastructure are key to overcoming current challenges.
+                    </p>
+                </div>
+                <div class="plot-container">
+                    <img src="sewage_management.jpg" alt="Sewage Management">
+                    <p class="plot-caption">Figure: Proposed Sewage Treatment Plant in Bettahalasuru</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Waste Management Section -->
+        <div class="section-wrapper">
+            <h2>Waste Management</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>
+                        The waste management scenario in Bettahalasuru is characterized by a significant amount of waste generated from households and commercial establishments. With an estimated 53 metric tons of garbage produced monthly, the village has struggled with effective waste segregation and disposal.
+                    </p>
+                    <p>
+                        <strong>Objectives:</strong>
+                        <ul>
+                            <li>Achieve a minimum of 90% waste segregation at the source.</li>
+                            <li>Establish efficient waste collection and disposal systems.</li>
+                            <li>Promote recycling and composting practices among residents.</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Implementation:</strong>
+                        The EcoGram Initiative, launched by Embassy Group in collaboration with TAICT, focuses on decentralized waste management, where residents sort waste into dry, wet, and sanitary categories at the source. Workshops and training sessions are organized to teach residents effective waste segregation and management techniques, significantly raising awareness.
+                    </p>
+                    <p>
+                        <strong>Harmful Effects:</strong>
+                        Improper waste disposal contributes to air, water, and soil pollution. Burning waste releases harmful toxins into the atmosphere. Additionally, accumulation of waste can lead to breeding grounds for disease-carrying pests, exacerbating public health risks.
+                    </p>
+                    <p>
+                        <strong>Conclusion:</strong>
+                        The EcoGram initiative has shown promising results in Bettahalasuru, achieving a segregation rate of 92% at the source. Continuous efforts in community engagement and infrastructural support are essential to maintain and enhance these achievements in waste management.
+                    </p>
+                </div>
+                <div class="plot-container">
+                    <img src="wastecollection.png" alt="Waste Management">
+                    <p class="plot-caption">Figure: Waste Management Practices in Bettahalasuru</p>
+                    <img src="wastecount.png" alt="Waste Management">
+                    <p class="plot-caption">Figure: Waste Management Practices in Bettahalasuru</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Home Navigation -->
+        <div class="navigation">
+            <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Scroll-triggered animation for sections
+        const textSections = document.querySelectorAll('.text-content');
+
+        window.addEventListener('scroll', function() {
+            textSections.forEach(section => {
+                const scrollPosition = window.scrollY + window.innerHeight;
+
+                if (scrollPosition > section.offsetTop + 100) {
+                    section.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

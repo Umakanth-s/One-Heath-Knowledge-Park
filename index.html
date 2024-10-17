@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>One Health Research Centre</title>
+    
+    <style>
+        body {
+            background-color: #0a0909; /* Dark background */
+            color: #b4b1b1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ffb74d;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Four columns layout */
+            grid-auto-rows: minmax(200px, auto); /* Increased row height */
+            gap: 40px; /* Space between the items */
+            justify-items: center; /* Center items in their grid cell */
+            align-items: center;
+        }
+
+        .image-button {
+            width: 120px;  
+            height: 120px; 
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s; /* Added transition for background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Center content */
+            border-radius: 10px; /* Optional: rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow */
+        }
+
+        .image-button:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+        }
+
+        .image-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px; /* Optional: rounded corners */
+            filter: brightness(0.9); /* Slightly darken the images */
+            transition: filter 0.3s; /* Smooth transition */
+        }
+
+        .image-button:hover img {
+            filter: brightness(1); /* Brighten the image on hover */
+        }
+
+        .text-label {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 1.1rem; /* Slightly increased font size */
+            color: #ffffff; /* Change text color to white */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Changed font for a modern look */
+            font-weight: bold; /* Made text bold */
+            text-transform: uppercase; /* Uppercase for emphasis */
+            letter-spacing: 0.5px; /* Slight spacing for better readability */
+        }
+
+        /* Assigning specific grid locations to the buttons */
+        #strays { grid-column: 1; grid-row: 1; }
+        #hospitals { grid-column: 4; grid-row: 1; }
+        #vectors { grid-column: 1; grid-row: 2; }
+        #humans { grid-column: 2; grid-row: 2; }
+        #sewage { grid-column: 3; grid-row: 2; }
+        #crops { grid-column: 4; grid-row: 2; }
+        #livestock { grid-column: 1; grid-row: 3; }
+        #water { grid-column: 4; grid-row: 3; }
+
+        .footer h2 {
+            color: #ff8a65;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        svg {
+            background-color: rgb(8, 7, 7);
+        }
+
+        .slice:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>One Health Knowledge Park</h1>
+        
+        <div class="grid-container">
+            <button class="image-button" id="strays" onclick="location.href='strays.html'">
+                <img src="dog.jpg" alt="Strays">
+                <span class="text-label">Stray Dogs</span>
+            </button>
+            <div></div> <!-- Empty space for the second column -->
+            <div></div> <!-- Empty space for the third column -->
+            <button class="image-button" id="hospitals" onclick="location.href='hospitals.html'">
+                <img src="hosp.jpg" alt="Hospitals">
+                <span class="text-label">Primary Healthcare Centers</span>
+            </button>
+            
+            <button class="image-button" id="vectors" onclick="location.href='vectors.html'">
+                <img src="vector.png" alt="Vectors">
+                <span class="text-label">Vectors</span>
+            </button>
+            <button class="image-button" id="humans" onclick="location.href='humans.html'">
+                <img src="human.jpg" alt="Humans">
+                <span class="text-label">Humans</span>
+            </button>
+            <button class="image-button" id="sewage" onclick="location.href='sewage.html'">
+                <img src="sewage.png" alt="Sewage">
+                <span class="text-label">Sewage</span>
+            </button>
+            <button class="image-button" id="crops" onclick="location.href='crops.html'">
+                <img src="crop.jpg" alt="Crops">
+                <span class="text-label">Crops</span>
+            </button>
+
+            <button class="image-button" id="livestock" onclick="location.href='livestock.html'">
+                <img src="livestock.jpg" alt="Livestock">
+                <span class="text-label">Livestock</span>
+            </button>
+            <div></div> <!-- Empty space for the second column -->
+            <div></div> <!-- Empty space for the third column -->
+            <button class="image-button" id="water" onclick="location.href='water.html'">
+                <img src="water.jpg" alt="Water">
+                <span class="text-label">Water</span>
+            </button>
+        </div>
+
+        <div class="footer">
+            <h2>Investigate soil, water, plants, and animals at the human interface</h2>
+        </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="chart-container">
+        <h2 style="text-align: center; margin-bottom: 20px;">Radial Pie Chart Representation</h2>
+        <div id="radialPieChart"></div>
+    </div>    
+    
+    <!-- D3.js Radial Pie Chart Script -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script>
+        // Set up the chart dimensions
+        const width = 500;
+        const height = 500;
+        const radius = Math.min(width, height) / 3;
+    
+        // Create SVG element
+        const svg = d3.select("#radialPieChart")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", `translate(${width / 2}, ${height / 2})`);
+    
+        // Data for the chart (8 values with different slice sizes)
+        const data = [40, 25, 27, 30, 33, 35, 40, 45]; // Values for each slice
+    
+        // Create color scale
+        const color = d3.scaleOrdinal()
+            .domain(data)
+            .range(['#8a89a6', '#98abc5', '#a05d56', '#ff8c00', '#6b486b', '#d0743c', '#ffb74d', '#ff8a65']);
+    
+        // Create an arc generator
+        const arc = d3.arc()
+            .innerRadius(0) // From the center outward
+            .outerRadius((d, i) => (radius / data.length) * (i + 4)); // Vary outer radius for each slice
+    
+        // Generate pie slices
+        const pie = d3.pie()
+            .value((d) => d) // Use the data values to determine the slice size
+            .sort(null); // Disable sorting so slices remain in input order
+    
+        // Draw the pie slices
+        svg.selectAll("path")
+            .data(pie(data))
+            .enter()
+            .append("path")
+            .attr("class", "slice")
+            .attr("d", arc)
+            .attr("fill", (d, i) => color(i))
+            .style("stroke", "#fff")
+            .style("stroke-width", "2px")
+            .on("mouseover", function() {
+                d3.select(this).transition().duration(200).attr("transform", "scale(1.1)");
+            })
+            .on("mouseout", function() {
+                d3.select(this).transition().duration(200).attr("transform", "scale(1)");
+            });
+            
+    </script>
+
+</body>
+</html>

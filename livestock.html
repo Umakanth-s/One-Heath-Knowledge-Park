@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Livestock - One Health Knowledge Park</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('livestock-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ddd;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #ffca28;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background-color: #ffca28;
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .text-content {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #eee;
+        }
+
+        .smart-text {
+            font-size: 1.1rem;
+            background-color: rgba(255, 202, 40, 0.2);
+            padding: 20px;
+            border-left: 5px solid #ffca28;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(255, 202, 40, 0.4);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .image-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .plot-caption {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #bbb;
+            text-align: center;
+        }
+
+        .text-content, .image-grid {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .navigation {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-btn {
+            padding: 12px 25px;
+            background-color: #ffca28;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #ffb74d;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(255, 202, 40, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .image-grid img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Livestock</h1>
+
+        <div class="content-wrapper">
+            <!-- Text Content Section -->
+            <div class="text-content" id="text-section">
+                <h2>Antimicrobial Resistance in Livestock: A Case Study in Bettahalasuru</h2>
+                <p>
+                    <strong>Introduction:</strong> Antimicrobial resistance (AMR) has emerged as a critical issue globally, especially in livestock farming. The overuse and misuse of antibiotics in animals can lead to resistance, which may eventually impact human health. Our study aimed to identify the current trends of antibiotic presence in animal samples in Bettahalasuru, Karnataka, and assess the potential for antimicrobial resistance.
+                </p>
+                <p class="smart-text">
+                    <strong>Objective:</strong> The primary goal of this analysis was to detect the presence of doxycycline and amoxicillin in livestock samples and determine whether these antibiotics are within permissible levels.
+                </p>
+                <p>
+                    <strong>Sample Preparation:</strong>
+                    <ul>
+                        <li>Feed: 20 mg of feed was homogenized with n-Hexane and processed for high-performance liquid chromatography (HPLC) analysis.</li>
+                        <li>Excreta: 1 g of pig and hen excreta was mixed with trichloroacetic acid, centrifuged, filtered, and analyzed via HPLC.</li>
+                        <li>Water: Water samples from the pig and hen farms were centrifuged and prepared for HPLC.</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Key Findings:</strong>
+                    <ul>
+                        <li><strong>Doxycycline Presence:</strong> Detected in pig excreta at 0.000002 mg/g and hen excreta at 0.00348 mg/g, both of which are below the permissible limit of 0.02 mg/g.</li>
+                        <li><strong>Amoxicillin Presence:</strong> No traces of amoxicillin were detected in any of the samples (feed, excreta, or water).</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>Conclusion:</strong> The presence of doxycycline in both pig and hen excreta, though traceable, is within safe limits. No amoxicillin was detected, suggesting minimal or no use of this antibiotic in the tested livestock. This implies that the current levels of antibiotic use in these animals are not posing an immediate risk of resistance buildup. However, ongoing monitoring is essential to ensure that resistance does not develop over time.
+                </p>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="image-grid" id="image-section">
+                <div>
+                    <img src="livestock1.png" alt="Pig Farm">
+                    <p class="plot-caption">Figure: Detection of Doxycycline in samples. </p>
+                </div>
+                <div>
+                    <img src="livestock2.png" alt="Hen Farm">
+                    <p class="plot-caption">Figure: Detection of Amoxicillin in samples.</p>
+                </div>
+                <div>
+                    <img src="livestock3.png" alt="Antibiotic Testing">
+                    <p class="plot-caption">Figure: Results</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Home Navigation -->
+        <div class="navigation">
+            <a href="index.html" class="back-btn">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Scroll-triggered animation for sections
+        const textSection = document.getElementById('text-section');
+        const imageSection = document.getElementById('image-section');
+
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            if (scrollPosition > textSection.offsetTop + 100) {
+                textSection.classList.add('active');
+            }
+
+            if (scrollPosition > imageSection.offsetTop + 100) {
+                imageSection.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
